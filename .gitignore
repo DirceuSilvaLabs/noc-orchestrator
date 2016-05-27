@@ -1,0 +1,10 @@
+# Primeiro ignoramos tudo
+*
+
+# Depois liberamos algumas coisas...
+!.gitignore
+!LICENSE.md
+!README.md
+
+# e claro, subdiretórios
+!*/
