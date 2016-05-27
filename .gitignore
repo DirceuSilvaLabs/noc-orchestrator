@@ -3,7 +3,7 @@
 
 # Depois liberamos algumas coisas...
 !.gitignore
-!LICENSE.md
+!LICENSE
 !README.md
 
 # e claro, subdiretórios
