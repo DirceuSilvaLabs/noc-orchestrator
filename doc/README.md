@@ -7,7 +7,7 @@ Principais definições do projeto:
 * **Procedimento**: Procedimento é a execução de uma ou mais **tarefas**. Importante ressaltar que o procedimento segue o conceito de processo e é representado por um *fluxograma*. Um procedimento sempre será executado para um servidor ou para um grupo de servidores. Neste último caso, na prática, o procedimento é executado unitariamente e separadamente (em paralelo) em cada um dos servidores de determinado grupo.
 * **Tarefa**: Unidade básica de execução. Exemplo: Parar um serviço ou criar um usuário. Uma tarefa, sempre que possível, é atrelada a um único módulo do Ansible. Toda tarefa deverá, obrigatoriamente, retornar o status da sua execução, isto é, se a execução ocorreu com sucesso ou com erro.
   * **Tipos de tarefas**:
-    * **Monitoramento**: tarefa que monitora algum ativo. Exemplo: Verifica o status de um serviço em determinado host, etc..
+    * **Monitoramento**: tarefa que monitora algum ativo. Exemplo: Verifica o status de um serviço em determinado host, etc.. Futuramente será desenvolvivo um tipo novo de tarefa de monitoramento - que será o monitorameto passivo, a qual receberá de forma passivo dados oriundo de fontes diversas via trap.
     * **Ação/atividade**: tarefa que efetivamente executa uma determinada ação, como: Inicializar um serviço, criar um usuário, etc.
     * **Notificação**: tarefa utilizada para enviar notificação. Incialmente as notificações serão por Email e Telegram.
 * **Inventariado**: Conjunto de hosts cadastrados (isto é, servidores que são passíveis de execução de tarefas/procedimentos). Cada host terá uma ou mais etiquetas representando o *grupo* a que pertence.
@@ -28,3 +28,10 @@ O projeto foi divido em partes, sendo:
 
 Cada uma das camadas são autocontidas - possuem seu próprio instalador e a comunicação entre camadas dar-se-á sempre por API Rest.
 
+
+
+## Visão geral do funcionamento
+A arquitetura do noc-orchestrator permite que sejam agendadas e executadas uma infinidade de tarefas. Neste sentido, considera-se que o sistema possibilita:
+* **Execução de procedimentos sob demanda**: Imagine isto como sendo um portal onde os operadores podem executar determinado procedimento de forma automatizada, rápida e segura.
+* **Agendamento de tarefas/procedimentos**: É possível agendar procedimentos para que eles sejam executados de tempos em tempos ou apenas uma vez.
+* **Monitoramento**: É possível criar tarefas de monitoramento e engatilhar respectivos alertas.
