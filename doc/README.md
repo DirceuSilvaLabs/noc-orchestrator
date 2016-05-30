@@ -6,10 +6,10 @@ O sistema foca em executar tarefas de orchestração na infraestrutura de TI de 
 Principais definições do projeto:
 * **Procedimento**: Procedimento é a execução de uma ou mais **tarefas**. Importante ressaltar que o procedimento segue o conceito de processo e é representado por um *fluxograma*. Um procedimento sempre será executado para um servidor ou para um grupo de servidores. Neste último caso, na prática, o procedimento é executado unitariamente e separadamente (em paralelo) em cada um dos servidores de determinado grupo.
 * **Tarefa**: Unidade básica de execução. Exemplo: Parar um serviço ou criar um usuário. Uma tarefa, sempre que possível, é atrelada a um único módulo do Ansible. Toda tarefa deverá, obrigatoriamente, retornar o status da sua execução, isto é, se a execução ocorreu com sucesso ou com erro.
-  * Tipos de tarefas:
-    * Monitoramento: tarefa que monitora algum ativo. Exemplo: Verifica o status de um serviço em determinado host, etc..
-    * Ação/atividade: tarefa que efetivamente executa uma determinada ação, como: Inicializar um serviço, criar um usuário, etc.
-    * Notificação: tarefa utilizada para enviar notificação. Incialmente as notificações serão por Email e Telegram.
+  * **Tipos de tarefas**:
+    * **Monitoramento**: tarefa que monitora algum ativo. Exemplo: Verifica o status de um serviço em determinado host, etc..
+    * **Ação/atividade**: tarefa que efetivamente executa uma determinada ação, como: Inicializar um serviço, criar um usuário, etc.
+    * **Notificação**: tarefa utilizada para enviar notificação. Incialmente as notificações serão por Email e Telegram.
 * **Inventariado**: Conjunto de hosts cadastrados (isto é, servidores que são passíveis de execução de tarefas/procedimentos). Cada host terá uma ou mais etiquetas representando o *grupo* a que pertence.
 * **Grupo** de hosts: Um grupo de host nada mais é do que uma flag para realizar o agrupamento lógico de determinados hosts. Um servidor poderá possuir uma ou mais etiqueta, isto é, um mesmo servidor poderá estar em mais de um grupo ao mesmo tempo. 
 
