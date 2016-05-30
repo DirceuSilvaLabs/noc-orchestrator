@@ -1,6 +1,10 @@
 # Documentação geral do noc-orchestrator
 
 O sistema foca em executar tarefas de orchestração na infraestrutura de TI de forma assíncrona. 
+A arquitetura do noc-orchestrator permite que sejam agendadas e executadas uma infinidade de tarefas. Neste sentido, considera-se que o sistema possibilita:
+* **Execução de procedimentos sob demanda**: Imagine isto como sendo um portal onde os operadores podem executar determinado procedimento de forma automatizada, rápida e segura.
+* **Agendamento de tarefas/procedimentos**: É possível agendar procedimentos para que eles sejam executados de tempos em tempos ou apenas uma vez.
+* **Monitoramento**: É possível criar tarefas de monitoramento e engatilhar respectivos alertas.
 
 ## Definições utilizadas no projeto
 Principais definições do projeto:
@@ -31,7 +35,9 @@ Cada uma das camadas são autocontidas - possuem seu próprio instalador e a com
 
 
 ## Visão geral do funcionamento
-A arquitetura do noc-orchestrator permite que sejam agendadas e executadas uma infinidade de tarefas. Neste sentido, considera-se que o sistema possibilita:
-* **Execução de procedimentos sob demanda**: Imagine isto como sendo um portal onde os operadores podem executar determinado procedimento de forma automatizada, rápida e segura.
-* **Agendamento de tarefas/procedimentos**: É possível agendar procedimentos para que eles sejam executados de tempos em tempos ou apenas uma vez.
-* **Monitoramento**: É possível criar tarefas de monitoramento e engatilhar respectivos alertas.
+
+O funcionamento geral consiste em:
+* É criado um determinado procedimento; o qual é composto por tarefas, blocos de decisão e laços de repetição.
+* Após a criação do procedimento, o usuário poderá executar (ou agendar a execução) do mesmo.Quando este determinado procedimento for agendado ele é registrado na camada de agendamento (lembrando que todas as execuções são agendadas, para o futuro ou para o presente).
+* Quando a camada de agendamento recebe tal procedimento a ser agendado, a camada grava tal requisição. Processos da camada de agendamento verifica a fila de agendamento. Quando chega o momento da execução, o processo começa a processar as respectivas tarefas - para realizar isto o processo envia uma requisição de tarefa para o nó de processamento.
+* A tarefa chegando no nó de processamento, entra na fila do mesmo. Processos executores consome tal fila. Após a execução da tarefa, o processo retorna o status da execução para a camada de agendamento. Neste momento, a camada decide o fluxo da execução do procedimento conforme o status retornado.
