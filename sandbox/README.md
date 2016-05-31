@@ -1,2 +1,3 @@
 #AREA DE TESTES
-Este diretório armazena diversos testes e trechos de códigos que foram criados no decorrer do projeto
+Este diretório armazena diversas "experiênvcias", trechos de códigos e pequenos utilitários que foram criados (ou forkados) no decorrer do projeto...
+
