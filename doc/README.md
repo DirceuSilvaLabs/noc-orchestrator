@@ -1,10 +1,5 @@
 # Documentação geral do noc-orchestrator
 
-O sistema foca em executar tarefas de orchestração na infraestrutura de TI de forma assíncrona. 
-A arquitetura do noc-orchestrator permite que sejam agendadas e executadas uma infinidade de tarefas. Neste sentido, considera-se que o sistema possibilita:
-* **Execução de procedimentos sob demanda**: Imagine isto como sendo um portal onde os operadores podem executar determinado procedimento de forma automatizada, rápida e segura.
-* **Agendamento de tarefas/procedimentos**: É possível agendar procedimentos para que eles sejam executados de tempos em tempos ou apenas uma vez.
-* **Monitoramento**: É possível criar tarefas de monitoramento e engatilhar respectivos alertas.
 
 ## Definições utilizadas no projeto
 Principais definições do projeto:
