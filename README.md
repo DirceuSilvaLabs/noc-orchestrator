@@ -7,3 +7,8 @@ Um projeto semelhante a este pode ser visto em: [https://github.com/ansible-sema
 ### Outras informações:
 * Acesse aqui e veja [como ajudar no projeto!](https://github.com/INAP-LABS/noc-orchestrator/wiki/Fluxo-de-trabalho-e-de-melhorias...) (**Fluxo de trabalho e de contribuições**)
 * Raiz de **documentação** do projeto: [DOC](https://github.com/INAP-LABS/noc-orchestrator/tree/master/doc)
+
+## Contato:
+Email: noc-orchestrator@inaprocessos.com 
+Grupo no Telegram: https://telegram.me/joinchat/A1d6cQbNslyPoqF_E5AHcQ
+
