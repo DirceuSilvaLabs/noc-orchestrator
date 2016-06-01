@@ -11,5 +11,5 @@ LOG="api_tornado.log"
 
 
 ARQUIVO_PACOTES_PYTHON=requerimentos.txt
-
+NOME_VIRTUAL_ENV="env-api"
 

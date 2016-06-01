@@ -13,6 +13,8 @@ source "$diretorio_atual/controlador_funcoes_uteis.sh"
 # Carregando as funcoes
 source "$diretorio_atual/controlador_funcoes.sh"
 
+# Comandos utilizados
+source "$diretorio_atual/controlador_comandos.sh"
 
 function MenuPrincipal(){
   AbsorveBufferTeclado
@@ -34,10 +36,9 @@ function MenuPrincipal(){
   echo -n "Qual a opção desejada? "
   read opcao
   case $opcao in
-    1) VerificaDependencias;read; Main ;;
-    2) Adicionar ;;
-    3) Deletar ;;
-    4) Backup ;;
+    1) Dependencias verificar;read; Main ;;
+    2) Instalar;read; Main ;;
+    
     I|i) Info ;read; Main ;;
     Q|q|S|s) exit ;;
     *) echo "Opção desconhecida." ; $CMD_SLEEP 2 ; Main ;;
@@ -47,12 +48,6 @@ function MenuPrincipal(){
 
 
 
-
-##############################################################
-# OBTENDO OS CAMINHOS DOS BINARIOS NECESSARIOS PARA O SCRIPT #
-#############################################################
-ObtemComando clear CMD_CLEAR
-ObtemComando sleep CMD_SLEEP
 
 
 #######################
