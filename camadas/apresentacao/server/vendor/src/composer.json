@@ -1,0 +1,8 @@
+{
+    "autoload": {
+        "classmap": [
+            "Model/"
+        ]
+    },
+    "include-path": ["Model/"]
+}
