@@ -10,7 +10,9 @@ A arquitetura do noc-orchestrator permite que sejam agendadas e executadas uma i
 * **Monitoramento**: É possível criar tarefas de monitoramento e engatilhar respectivos alertas.
 
 
-Um projeto semelhante a este pode ser visto em: [https://github.com/ansible-semaphore/semaphore](https://github.com/ansible-semaphore/semaphore)
+Projetos que possuem alguma semelhança no conceito: 
+* [https://github.com/ansible-semaphore/semaphore](https://github.com/ansible-semaphore/semaphore)
+* [https://github.com/Runbook/runbook](https://github.com/Runbook/runbook)
 
 
 ### Outras informações:
