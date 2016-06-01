@@ -16,8 +16,8 @@ Projetos que possuem alguma semelhança no conceito:
 
 
 ### Outras informações:
-* Acesse aqui e veja [como ajudar no projeto!](https://github.com/INAP-LABS/noc-orchestrator/wiki/Fluxo-de-trabalho-e-de-melhorias...) (**Fluxo de trabalho e de contribuições**)
-* Raiz de **documentação** do projeto: [DOC](https://github.com/INAP-LABS/noc-orchestrator/tree/master/doc)
+*  :sunglasses: [Quer contribuir com o projeto? Veja como!](https://github.com/INAP-LABS/noc-orchestrator/wiki/Fluxo-de-trabalho-e-de-melhorias...) (**Fluxo de trabalho e de contribuições**)
+* :books: Raiz de **documentação** do projeto: [DOC](https://github.com/INAP-LABS/noc-orchestrator/tree/master/doc)
 
 ## Contato:
 
