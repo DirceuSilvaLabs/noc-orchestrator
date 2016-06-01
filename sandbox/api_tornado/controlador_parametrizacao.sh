@@ -10,3 +10,6 @@ NOME_APP="API Tornado"
 LOG="api_tornado.log"
 
 
+ARQUIVO_PACOTES_PYTHON=requerimentos.txt
+
+

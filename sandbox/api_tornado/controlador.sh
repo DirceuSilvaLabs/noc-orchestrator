@@ -34,11 +34,11 @@ function MenuPrincipal(){
   echo -n "Qual a opção desejada? "
   read opcao
   case $opcao in
-    1) Info; Main ;;
+    1) VerificaDependencias;read; Main ;;
     2) Adicionar ;;
     3) Deletar ;;
     4) Backup ;;
-    I|i) Info; $CMD_SLEEP 1 ; Main ;;
+    I|i) Info ;read; Main ;;
     Q|q|S|s) exit ;;
     *) echo "Opção desconhecida." ; $CMD_SLEEP 2 ; Main ;;
   esac
