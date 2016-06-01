@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Interface para executar </title></head>
+    <body>
+        <h1>Informe os argumentos abaixos:</h1>
+        <form method="post" action="/result">
+        <p>Host/Grupo:
+ 	<select name="pattern">
+		{{ _(dropdown) }}
+	</select>
+	</p>
+        <p>Módulo<br><input type="text" name="module_name"></p>
+        <p>Argumentos<br><input type="text" name="module_args"></p>
+        <input type="submit">
+        </form>
+    </body>
+</html>
