@@ -18,7 +18,7 @@ urls = [
     [r'.*', APINotFoundHandler],
 ]
 
-# Add subpath to urls
+# Adcionando subpath nas urls
 for u in urls:
     u[0] = options.subpath + u[0]
 
