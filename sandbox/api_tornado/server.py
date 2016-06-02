@@ -6,7 +6,6 @@ import tornado.netutil
 import tornado.options
 import tornado.httpserver
 from tornado.options import define, options, parse_command_line
-from motorengine import connect
 
 import config
 
