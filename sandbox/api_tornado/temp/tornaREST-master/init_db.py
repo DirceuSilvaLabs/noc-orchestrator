@@ -29,8 +29,8 @@ def init_db():
 
 if __name__ == '__main__':
     io_loop = ioloop.IOLoop.instance()
-    connect(config.DB_NAME, host=config.DB_HOST, port=config.DB_PORT, io_loop=io_loop,
-            username=config.DB_USER, password=config.DB_PWD)
+    connect(config.DB_NAME, host=config.DB_HOST, port=config.DB_PORT, io_loop=io_loop)
+            #username=config.DB_USER, password=config.DB_PWD)
 
     io_loop.add_timeout(1, init_db)
     io_loop.start()

@@ -1,14 +1,14 @@
 # coding:utf-8
 
-from bson import ObjectId
+#from bson import ObjectId
 from util.json import dumps
 import traceback
 from tornado.web import RequestHandler, HTTPError, os
 import config
 from handler.api import errors
-from util.token import token_manager
-from qiniu import Auth, put_data
-from util.crypt import md5_data
+#from util.token import token_manager
+#from qiniu import Auth, put_data
+#from util.crypt import md5_data
 
 
 class BaseHandler(RequestHandler):
@@ -67,40 +67,7 @@ class BaseHandler(RequestHandler):
             'data': data
         }))
 
-    def is_logined(self):
-        if 'Token' in self.request.headers:
-            token = self.request.headers['Token']
-            logined, uid = token_manager.validate_token(token)
 
-            if logined:
-                # 已经登陆
-                return uid
-
-        # 尚未登陆
-        raise HTTPError(**errors.status_2)
-
-    def upload_file_from_request(self, name, key):
-        if name in self.request.files:
-            fileinfo = self.request.files[name][0]
-            fname = fileinfo['filename']
-            body = fileinfo['body']
-
-            extn = os.path.splitext(fname)[1]
-            cname = md5_data(body) + extn
-
-            q = Auth(config.QINIU_AK, config.QINIU_SK)
-            key += cname
-            token = q.upload_token(config.QINIU_BUCKET_NAME)
-            ret, info = put_data(token, key, body)
-
-            if info.status_code == 200:
-                return config.QINIU_HOST + key
-            else:
-                # 上传失败
-                raise HTTPError(**errors.status_24)
-
-        # 找不到上传文件
-        raise HTTPError(**errors.status_25)
 
     @staticmethod
     def vaildate_id(_id):

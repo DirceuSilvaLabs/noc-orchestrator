@@ -1,14 +1,14 @@
 # coding:utf-8
 
-from bson import ObjectId
+#from bson import ObjectId
 import tornado
 from tornado import gen
 from tornado.web import HTTPError
 
 from handler.api import errors
 from handler.api.base import BaseHandler
-from data.collections import User, School
-from util.token import token_manager
+#from data.collections import User, School
+#from util.token import token_manager
 
 
 class RegisterHandler(BaseHandler):

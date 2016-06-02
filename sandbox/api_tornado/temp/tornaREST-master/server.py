@@ -24,8 +24,8 @@ def main():
 
     # Connect to mongodb
     io_loop = ioloop.IOLoop.instance()
-    connect(config.DB_NAME, host=config.DB_HOST, port=config.DB_PORT, io_loop=io_loop,
-            username=config.DB_USER, password=config.DB_PWD)
+    connect(config.DB_NAME, host=config.DB_HOST, port=config.DB_PORT, io_loop=io_loop)
+    #        username=config.DB_USER, password=config.DB_PWD)
 
     # Star application
     from application import app

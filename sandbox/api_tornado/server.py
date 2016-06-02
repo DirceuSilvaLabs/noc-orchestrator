@@ -37,8 +37,8 @@ def main():
         print('Servico rodando no http://127.0.0.1:%s%s' % (options.port, options.subpath))
         print('Para sair/parar: Control-C')
 
+    io_loop = ioloop.IOLoop.instance()
     io_loop.start()
-
 
 if __name__ == "__main__":
     main()

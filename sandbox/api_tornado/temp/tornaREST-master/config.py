@@ -8,8 +8,8 @@ PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
 DB_HOST = 'localhost'
 DB_PORT = 27017
 DB_NAME = 'test'
-DB_USER = ''
-DB_PWD = ''
+DB_USER = 'test_user'
+DB_PWD = 'teste_pass'
 
 # Redis Config
 REDIS_HOST = 'localhost'

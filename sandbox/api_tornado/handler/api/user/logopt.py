@@ -4,10 +4,10 @@ import tornado
 from tornado import gen
 from tornado.web import HTTPError
 
-from util.token import token_manager
+#from util.token import token_manager
 from handler.api import errors
 from handler.api.base import BaseHandler
-from data.collections import User
+#from data.collections import User
 
 
 class LoginHandler(BaseHandler):

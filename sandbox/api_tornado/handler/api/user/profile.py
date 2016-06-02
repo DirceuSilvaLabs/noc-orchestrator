@@ -5,7 +5,7 @@ from tornado import gen
 from tornado.web import HTTPError
 
 from handler.api.base import BaseHandler
-from data.collections import User
+#from data.collections import User
 
 
 class ProfileHandler(BaseHandler):
