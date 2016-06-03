@@ -1,1 +1,1 @@
-propostas iniciais de logo e icone
+Propostas iniciais de logo e icone. Todos os feedbacks são bem-vindos
