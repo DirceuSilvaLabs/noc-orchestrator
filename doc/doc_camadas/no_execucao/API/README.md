@@ -10,6 +10,9 @@ Segue descrição das entidades.
 
 ### Entidade tarefa
 
+![Entidade Tarefa](https://github.com/INAP-LABS/noc-orchestrator/blob/no_execucao/doc/doc_camadas/no_execucao/API/Fluxo%20NOC2.jpg "tarefa")
+
+
 As entidades contidas na API responsável por comunicação com a camada de agendamento são:
 
 * Entidade **tarefa**: esta entidade está responsável por executar as solicitações dada camada de agendamento, esta entidade poderá submeter determinada tarefa para a fila de execução, poderá cancelar determinada tarefa e/ou listar as tarefas (com ou sem filtro).
