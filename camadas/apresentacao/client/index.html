@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>NOC-Orchestrator</title>
+<script type="text/javascript">
+	function C(aId){
+		var _root = this;
+		this.id = aId;
+		this.cx = 100;
+		this.cy = 50;
+		this.r = 50;
+		this.stroke = 'blue';
+		this.strokeWidth = 4;
+		this.fill = 'blue';
+		
+		this.atualiza = function(){
+			var c= document.getElementById(_root.id);
+			c.style.fill = _root.fill;
+			c.setAttribute('cy',_root.cy);
+			c.setAttribute('cy',_root.cy);
+			c.setAttribute('r',_root.r);
+		}
+	}
+	
+	var c = new C('a');
+</script>
+</head>
+<body>
+	<svg style="width: 800px; height: 400px">
+	  <circle onmouseover="c.atualiza()" cx="50" id="a" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+	</svg>
+	<br>
+	<button onclick="c.cx = 80; c.atualiza()">Teste</button>
+</body>
+</html>
