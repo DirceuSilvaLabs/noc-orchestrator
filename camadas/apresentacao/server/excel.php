@@ -70,7 +70,8 @@ try{
 	$objeto = new $classe($request, false);
 	
 	//pega o resultado do método solicitado
-	$result = $objeto->$classe_metodo[1]();
+	$metodo = $classe_metodo[1];
+	$result = $objeto->$metodo();
 	$keys = array();
 	$linha0 = true;
 	foreach ($result as $k => $v){

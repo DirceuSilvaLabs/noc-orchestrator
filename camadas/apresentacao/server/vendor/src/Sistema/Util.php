@@ -1,11 +1,6 @@
 <?php
 namespace Model\Sistema;
-
-date_default_timezone_set("America/Sao_Paulo");
 if(strcmp(basename($_SERVER['SCRIPT_NAME']), basename(__FILE__)) === 0){ exit("Acesso negado");}
-// ini_set("display_errors",1);
-// ini_set("display_startup_erros",1);
-// error_reporting(E_ALL);
 
 class Util { 
 
