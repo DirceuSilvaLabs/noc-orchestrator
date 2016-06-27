@@ -1,0 +1,64 @@
+<!DOCTYPE htm>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../libs/css/bootstrap.min.css">
+<title>Nova Organização</title>
+</head>
+<body>
+	<form class="form-horizontal">
+		<fieldset>
+
+			<!-- Form Name -->
+			<legend>Cadastro Organização</legend>
+
+			<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="organizacao">Organização</label>
+				<div class="col-md-6">
+					<input id="organizacao" name="organizacao" type="text"
+						placeholder="" class="form-control input-md">
+
+				</div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="nome">Nome do
+					Responsável</label>
+				<div class="col-md-6">
+					<input id="nome" name="nome" type="text" placeholder=""
+						class="form-control input-md">
+
+				</div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="email">E-mail</label>
+				<div class="col-md-6">
+					<input id="email" name="email" type="text" placeholder=""
+						class="form-control input-md">
+
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-8">
+					<button type="button" id="voltar" name="voltar"
+						class="btn btn-danger">Voltar</button>
+					<button id="avancarCadastroOrganizacao" type="button"
+						onclick="coolCadastroOrganizacao()"
+						name="avancarCadastroOrganizacao" class="btn btn-success">Avançar</button>
+				</div>
+			</div>
+		</fieldset>
+
+	</form>
+	<script src="../libs/js/jquery-2.2.4.js"></script>
+	<script type="text/javascript" src="../libs/js/md5.js"></script>
+	<script type="text/javascript" src="../libs/js/index.js"
+		charset="UTF-8"></script>
+	<script src="../libs/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../libs/js/cadastro-organizacao.js"></script>
+</body>
+</html>

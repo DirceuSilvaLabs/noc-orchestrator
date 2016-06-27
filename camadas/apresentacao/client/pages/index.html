@@ -1,0 +1,64 @@
+<!DOCTYPE htm>
+<html>
+<head>
+
+<meta charset="utf-8">
+<link rel="stylesheet" href="../libs/css/bootstrap.min.css">
+<title>NOC - ORCHESTRATOR</title>
+</head>
+<body>
+	<form class="form-horizontal">
+		<fieldset>
+
+			<!-- Form Name -->
+			<legend>Login - Instituição</legend>
+
+			<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="usuario">Usuário</label>
+				<div class="col-md-4">
+					<input id="usuario" name="usuario" type="text" placeholder=""
+						class="form-control input-md">
+
+				</div>
+			</div>
+
+			<!-- Password input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="senha">senha</label>
+				<div class="col-md-4">
+					<input id="senha" name="senha" type="password" placeholder=""
+						class="form-control input-md">
+
+				</div>
+			</div>
+
+			<!-- Button -->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="entrar"></label>
+				<div class="col-md-4">
+					<button id="cadastrar" name="cadastrar" type="button" onclick="novaTelaCad()" class="btn btn-success">Cadastrar</button>
+					<button id="entrar" name="entrar" type="button" onclick="novaTela()" class="btn btn-success">Entrar</button>
+				</div>
+			</div>
+
+		</fieldset>
+	</form>
+	
+	<script>
+		function novaTela(){
+			alert("Estou implementando. Vai no próximo commit");
+			window.location.href = "pages/Admin/index.html";
+		}
+		function novaTelaCad(){
+			alert("A próxima tela já salva no banco de dados");
+			window.location.href = "cadastro-organizacao.html";
+		}
+	</script>
+  
+	<script src="../libs/js/jquery-2.2.4.js"></script>
+	<script type="text/javascript" src="../libs/js/md5.js"></script>
+	<script type="text/javascript" src="../libs/js/index.js" charset="UTF-8"></script>
+	<script src="../libs/js/bootstrap.min.js"></script>
+</body>
+</html>

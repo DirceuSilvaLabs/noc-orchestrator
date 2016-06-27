@@ -1,0 +1,106 @@
+<!DOCTYPE htm>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../libs/css/bootstrap.min.css">
+<title>Configuração de Equipes</title>
+</head>
+<body>
+
+	<form class="form-horizontal">
+		<fieldset>
+
+			<!-- Form Name -->
+			<legend>Configuração de Equipes</legend>
+
+			<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="equipe">Nome da Equipe</label>
+				<div class="col-md-4">
+					<input id="equipe" name="equipe" type="text" placeholder=""
+						class="form-control input-md">
+
+				</div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="identificador">Identificador</label>
+				<div class="col-md-4">
+					<input id="identificador" name="identificador" type="text" placeholder=""
+						class="form-control input-md">
+
+				</div>
+			</div>
+
+			<!-- Button -->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="adicionar"></label>
+				<div class="col-md-4">
+					<button id="adicionar" type="button" name="adicionar"
+						class="btn btn-primary">Adicionar</button>
+				</div>
+			</div>
+
+		</fieldset>
+	</form>
+
+	<div align="center">
+		<label>Cadastrados</label>
+		<ul id="lista">
+		</ul>
+	</div>
+
+	<footer>
+		<form class="form-horizontal">
+<fieldset>
+
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="salvar"></label>
+  <div class="col-md-4">
+    <button id="salvar" type="button" onclick="Informacao()"  style="visibility: hidden;" name="salvar" class="btn btn-success">Gravar Dados</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+	</footer>
+
+	<script src="../libs/js/jquery-2.2.4.js"></script>
+	<script type="text/javascript" src="../libs/js/md5.js"></script>
+	<script type="text/javascript" src="../libs/js/index.js"
+		charset="UTF-8"></script>
+	<script src="../libs/js/bootstrap.min.js"></script>
+
+	<script>
+		$('#lista').on('dblclick', 'li', function() {
+			$(this).animate({
+				'margin-left' : '+=100'
+			}, function() {
+				$(this).remove();
+			});
+		});
+
+		$('#adicionar').click(
+				function() {
+					var texto = "Equipe: " + $("#equipe").val()
+							+ " | Identificador: " + $("#identificador").val();
+					$('<li>').text(texto).css({
+						'color' : 'blue',
+						'background-color' : 'lightgrey'
+					}).appendTo('#lista');
+					$("#equipe").val("");
+					$("#identificador").val("");
+				});
+
+
+	
+		function Informacao(){
+			alert("Estou implementando");
+		}
+	</script>
+
+</body>
+</html>
