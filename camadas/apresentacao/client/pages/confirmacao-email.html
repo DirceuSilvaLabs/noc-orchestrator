@@ -12,29 +12,27 @@
 			<!-- Form Name -->
 			<legend>Confirmação de E-mail</legend>
 
-			<!-- Text input-->
-			<div>
-				<label class="col-md-4 control-label" for="codVerificacao">Informe
-					o Código enviado por e-mail</label>
-				<div class="col-md-5">
-					<input id="codVerificacao" name="codVerificacao" type="text"
-						placeholder="" class="form-control input-md">
-				</div>
+			<label class="col-md-4 control-label" for="codVerificacao">Informe
+				o Código enviado por e-mail</label>
+			<div class="col-md-5">
+				<input id="codVerificacao" name="codVerificacao" type="text"
+					placeholder="" class="form-control input-md">
+			</div>
 
-				<br> <br> <br>
+			<br> <br> <br>
 
-				<!-- Button (Double) -->
-				<div class="form-group">
-					<label class="col-md-4 control-label" for="voltar"></label>
-					<div class="col-md-8">
-						<button id="voltar" name="voltar" type="button"
-							class="btn btn-danger">Voltar</button>
-						<button id="reenviarCodigo" type="button" name="reenviarCodigo"
-							class="btn btn-primary">Reenviar Código</button>
-						<button id="avancar" name="avancar" type="button"
-							class="btn btn-success" onclick="coolConfirmacaoEmail()">Avançar</button>
-					</div>
+			<!-- Button (Double) -->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="voltar"></label>
+				<div class="col-md-8">
+					<button id="voltar" name="voltar" type="button"
+						class="btn btn-danger">Voltar</button>
+					<button id="reenviarCodigo" type="button" name="reenviarCodigo"
+						class="btn btn-primary" onclick="reenviarEmail()">Reenviar Código</button>
+					<button id="avancar" name="avancar" type="button"
+						class="btn btn-success" onclick="coolConfirmacaoEmail()">Avançar</button>
 				</div>
+			</div>
 		</fieldset>
 	</form>
 

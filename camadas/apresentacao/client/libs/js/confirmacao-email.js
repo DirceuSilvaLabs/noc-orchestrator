@@ -1,5 +1,8 @@
+var primeiroAcesso = true;
+
 function validar() {
-	let	codVerificacao = $("#codVerificacao").val();
+	let
+	codVerificacao = $("#codVerificacao").val();
 
 	if (codVerificacao == '') {
 		alert('Informe o código de verificação');
@@ -17,17 +20,50 @@ function coolConfirmacaoEmail() {
 }
 
 function verificar() {
-	var dados = {
+	let
+	dados = {
 		jsonrpc : '2.0',
 		auth : '',
 		id : 1,
-		method : 'Token.buscar',
-		params : localStorage.getItem("instituicao")
+		method : 'Token.verifica',
+		params : localStorage.getItem("instituica0o")
 	};
 	console.log(dados);
+	alert('Chama reenviar Codigo');
+		
+	if(primeiroAcesso){
+		window.location.href = "adicionar-administradores-locais.html";
+	}else{
+		window.location.href = "Admin/index.html";
+	}
+// window.location.href = "adicionar-administradores-locais.html";
+	// api(dados);
+}
 
-	//api(dados);
-	window.location.href = "adicionar-administradores-locais.html";
+function reenviarEmail() {
+	alert('Chama reenviar Codigo');
+	return
+
+	let
+	dadosReenviarToken = {
+		jsonrpc : '2.0',
+		auth : '',
+		id : 1,
+		method : 'Token.gerar',
+		params : {
+			instituicao : localStorage.getItem("instituicao"),
+		}
+	}
+
+	$
+			.ajax({
+				type : "GET",
+				data : dadosReenviarToken,
+				url : "http://localhost/noc-orchestrator/camadas/apresentacao/server/api.php",
+				success : function(aRetorno) {
+					alert("Novo Token enviado. Por favor, refaça a comparação");
+				}
+			})
 }
 
 function api(dados) {
@@ -37,13 +73,15 @@ function api(dados) {
 				data : dados,
 				url : "http://localhost/noc-orchestrator/camadas/apresentacao/server/api.php",
 				success : function(aRetorno) {
-					console.log(aRetonro);
-					if ($("#avancar").val() == aRetorno.toString()) {
-						alert('passou')
-						window.location.href = "adicionar-administradores-locais.html";
-
+					if (aRetorno.result) {
+						
+						if(primeiroAcesso){
+							window.location.href = "adicionar-administradores-locais.html";
+						}else{
+							window.location.href = "Admin/index.html";
+						}
 					} else {
-						alert("codigo invalido");
+						alert("Token inválido");
 					}
 				}
 			});

@@ -15,7 +15,8 @@
 
 			<!-- Text input-->
 			<div class="form-group">
-				<label class="col-md-4 control-label" for="equipe">Nome da Equipe</label>
+				<label class="col-md-4 control-label" for="equipe">Nome da
+					Equipe</label>
 				<div class="col-md-4">
 					<input id="equipe" name="equipe" type="text" placeholder=""
 						class="form-control input-md">
@@ -27,8 +28,8 @@
 			<div class="form-group">
 				<label class="col-md-4 control-label" for="identificador">Identificador</label>
 				<div class="col-md-4">
-					<input id="identificador" name="identificador" type="text" placeholder=""
-						class="form-control input-md">
+					<input id="identificador" name="identificador" type="text"
+						placeholder="" class="form-control input-md">
 
 				</div>
 			</div>
@@ -52,20 +53,43 @@
 	</div>
 
 	<footer>
-		<form class="form-horizontal">
-<fieldset>
+		<div align="center">
+			<div class="form-group" align="center">
+				<div class="col-md-8">
+					<button type="button" id="voltar" name="voltar"
+						onclick="history.back()" class="btn btn-danger">Voltar</button>
+					<button id="avancarCadastroOrganizacao" type="button"
+						onclick="proximo()" name="avancarCadastroOrganizacao"
+						class="btn btn-success">Avançar</button>
+				</div>
+			</div>
+		</div>
+		<fieldset>
 
 
-<!-- Button -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="salvar"></label>
-  <div class="col-md-4">
-    <button id="salvar" type="button" onclick="Informacao()"  style="visibility: hidden;" name="salvar" class="btn btn-success">Gravar Dados</button>
-  </div>
-</div>
+			<!-- Button -->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="salvar"></label>
+				<div class="col-md-4">
+					<button id="salvar" type="button" onclick="Informacao()"
+						style="visibility: hidden;" name="salvar" class="btn btn-success">Gravar
+						Dados</button>
+				</div>
+			</div>
 
-</fieldset>
-</form>
+		</fieldset>
+		</form>
+		<div align="center">
+			<div class="form-group" align="center">
+				<div class="col-md-8">
+					<button type="button" id="voltar" name="voltar"
+						onclick="history.back()" class="btn btn-danger">Voltar</button>
+					<button id="avancarCadastroOrganizacao" type="button"
+						onclick="proximo()" name="avancarCadastroOrganizacao"
+						class="btn btn-success">Avançar</button>
+				</div>
+			</div>
+		</div>
 	</footer>
 
 	<script src="../libs/js/jquery-2.2.4.js"></script>
@@ -95,9 +119,7 @@
 					$("#identificador").val("");
 				});
 
-
-	
-		function Informacao(){
+		function Informacao() {
 			alert("Estou implementando");
 		}
 	</script>

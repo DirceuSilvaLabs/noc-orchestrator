@@ -53,55 +53,74 @@
 
 	<footer>
 		<form class="form-horizontal">
-<fieldset>
+			<fieldset>
 
 
-<!-- Button -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="salvar"></label>
-  <div class="col-md-4">
-    <button id="salvar" type="button" onclick="Informacao()" style="visibility: hidden;" name="salvar" class="btn btn-success">Gravar Dados</button>
-  </div>
-</div>
+				<!-- Button -->
+				<div class="form-group">
+					<label class="col-md-4 control-label" for="salvar"></label>
+					<div class="col-md-4">
+						<button id="salvar" type="button" onclick="Informacao()"
+							style="visibility: hidden;" name="salvar" class="btn btn-success">Gravar
+							Dados</button>
+					</div>
+				</div>
 
-</fieldset>
-</form>
+			</fieldset>
+		</form>
+
+		<div align="center">
+			<div class="form-group" align="center">
+				<div class="col-md-8">
+					<button type="button" id="voltar" name="voltar"
+						onclick="history.back()" class="btn btn-danger">Voltar</button>
+					<button id="avancarCadastroOrganizacao" type="button"
+						onclick="proximo()"
+						name="avancarCadastroOrganizacao" class="btn btn-success">Avançar</button>
+				</div>
+			</div>
+		</div>
 	</footer>
+	
+	
 
 	<script src="../libs/js/jquery-2.2.4.js"></script>
 	<script type="text/javascript" src="../libs/js/md5.js"></script>
 	<script type="text/javascript" src="../libs/js/index.js"
 		charset="UTF-8"></script>
 	<script src="../libs/js/bootstrap.min.js"></script>
+	<script type="text/javascript"
+		src="../libs/js/configuracao-ambiente.js"></script>
 
 	<script>
-		$('#lista').on('dblclick', 'li', function() {
-			$(this).animate({
-				'margin-left' : '+=100'
-			}, function() {
-				$(this).remove();
-			});
-		});
+	
 
-		$('#adicionar').click(
-				function() {
-					var texto = "Endereço: " + $("#endereco").val()
-							+ " | Token: " + $("#Token").val();
-					$('<li>').text(texto).css({
-						'color' : 'blue',
-						'background-color' : 'lightgrey'
-					}).appendTo('#lista');
-					$("#endereco").val("");
-					$("#Token").val("");
-				});
-
-		$("#salvar").click(function(){
-			('#this').css('visibility': 'visible;');
-		})
-
-		function Informacao(){
-			alert("Estou implementando");
+		function proximo() {
+			window.location.href = "Admin/index.html";
 		}
+		// 		$('#lista').on('dblclick', 'li', function() {
+		// 			$(this).animate({
+		// 				'margin-left' : '+=100'
+		// 			}, function() {
+		// 				$(this).remove();
+		// 			});
+		// 		});
+
+		// 		$('#adicionar').click(
+		// 				function() {
+		// 					var texto = "Endereço: " + $("#endereco").val()
+		// 							+ " | Token: " + $("#Token").val();
+		// 					$('<li>').text(texto).css({
+		// 						'color' : 'blue',
+		// 						'background-color' : 'lightgrey'
+		// 					}).appendTo('#lista');
+		// 					$("#endereco").val("");
+		// 					$("#Token").val("");
+		// 				});
+
+		// 		function Informacao() {
+		// 			alert("Estou implementando");
+		// 		}
 	</script>
 
 
