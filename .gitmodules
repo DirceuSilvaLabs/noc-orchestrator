@@ -1,0 +1,3 @@
+[submodule "microservices"]
+	path = microservices
+	url = https://github.com/INAP-LABS/microservices
