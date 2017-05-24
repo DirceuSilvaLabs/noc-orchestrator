@@ -13,6 +13,7 @@
 
 #MAC OS X
 *.DS_Store
+.DS_Store
 .AppleDouble
 .LSOverride
 ._*
@@ -119,3 +120,15 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+
+
+#ANSIBLE
+.vagrant/
+._*
+tests.out
+*.retry
+*.log
+vbox_host.cfg
+.DS_Store
+*.py[co]
