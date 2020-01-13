@@ -19,9 +19,3 @@ Projetos que possuem alguma semelhança no conceito:
 *  :sunglasses: [Quer contribuir com o projeto? Veja como!](https://github.com/INAP-LABS/noc-orchestrator/wiki/Fluxo-de-trabalho-e-de-melhorias...) (**Fluxo de trabalho e de contribuições**)
 * :books: Raiz de **documentação** do projeto: [DOC](https://github.com/INAP-LABS/noc-orchestrator/tree/master/doc)
 
-## Contato:
-
-Email: noc-orchestrator@inaprocessos.com 
-
-Grupo no Telegram: https://telegram.me/joinchat/A1d6cQbNslyPoqF_E5AHcQ
-
