@@ -1,0 +1,16 @@
+stages:
+- name: Criando as Imagens
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./entes/central/sandbox/Dockerfile
+      buildContext: ./entes/central/sandbox/
+      tag: sandbox-api:${CICD_EXECUTION_SEQUENCE}
+- name: Fazendo deploy no kubernetes
+  steps:
+  - applyYamlConfig:
+      path: ./entes/central/sandbox/k8s-manifestos/app-sandbox.yaml
+  - applyYamlConfig:
+      path: ./entes/central/sandbox/k8s-manifestos/banco.yaml
+  - applyYamlConfig:
+      path: ./entes/central/sandbox/k8s-manifestos/ide-theia.yaml
+timeout: 120
