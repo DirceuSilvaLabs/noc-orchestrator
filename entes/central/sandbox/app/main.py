@@ -9,7 +9,7 @@ from principal.database import SessionLocal, engine
 app = FastAPI(
     title="NOC-ORCHESTRATOR",
     description="API principal do noc-orchestrator",
-    version="0.0.1-sandbox",
+    version="0.0.2-sandbox",
 )
 
 @app.get("/debug")
